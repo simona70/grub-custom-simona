@@ -1,0 +1,27 @@
+# simona 2018-04-19
+# This config file must be in /etc/default/grub-custom and is used by /etc/grub.d/11_linux-simona
+# ------------------------------------------------------------------------------------------------------------------------------------------
+
+#Remove comment to use FALLBACK-initd instead standard initrd
+#GRUB_OPTION_FALLBACK=true
+
+#Remove comment to disable entry
+#GRUB_OPTION1_TITLE=disable
+
+#Create a link to kernels adding release in name
+#It is required before do:
+#mkdir /boot/release.d
+#chmod -R 777 /boot/release.d
+GRUB_KERNEL_VERSION_OUTPUT=enable
+
+GRUB_OPTION1_TITLE="Textmode"
+GRUB_OPTION1_CMDLINE_LINUX="systemd.unit=multi-user.target"
+
+#Enable FALLBACK entry
+GRUB_OPTION_ENABLE_FALLBACK=true
+
+#Enable RECOVERY entry
+GRUB_OPTION_ENABLE_RECOVERY=true
+
+
+
